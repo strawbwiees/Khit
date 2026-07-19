@@ -1,6 +1,6 @@
 # khit!
 
-> Think. Guess. Unlock.
+> Think, Guess, & Unlock!
 
 Khit is a Wordle-inspired word puzzle game built with Python. Players can challenge themselves by guessing hidden words, earn XP through gameplay, and customize their experience by unlocking different color themes.
 
@@ -34,11 +34,6 @@ Navigate through different sections:
 
 ### ⭐ XP Reward System
 Players earn XP by completing games.
-
-Rewards include:
-- Winning a game
-- Completing daily rewards
-
 XP can be used to unlock color themes.
 
 ---
@@ -46,7 +41,7 @@ XP can be used to unlock color themes.
 ### 🎨 Theme Shop
 Customize the game's appearance by purchasing color themes using XP.
 
-Available themes:
+Current available themes:
 - Default
 - Nightnight
 - Leafie
@@ -57,11 +52,6 @@ Themes modify the game's visual design, including:
 - Background colors
 - Buttons
 - Game tiles
-
----
-
-### 📅 Daily Rewards
-Players can receive XP rewards once per day.
 
 ---
 
@@ -96,14 +86,8 @@ Khit/
 │   ├── fonts/
 │
 ├── README.md
+├── Screenshots
 ├── LICENSE
 └── .gitignore
 ```
 
----
-
-## ⌛Duration of the project
-
-- 5 days
-
----
