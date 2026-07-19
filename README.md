@@ -2,9 +2,9 @@
 
 > Think, Guess, & Unlock!
 
-Khit is a Wordle-inspired word puzzle game built with Python. Players can challenge themselves by guessing hidden words, earn XP through gameplay, and customize their experience by unlocking different color themes.
+khit! is a Wordle-inspired word puzzle game built with Python. Players can challenge themselves by guessing hidden words, earn XP through gameplay, and customize their experience by unlocking different color themes.
 
-The name **Khit** comes from the Thai word **"คิด (khit)"**, meaning *to think*, representing the game's focus on logic, guessing, and problem-solving.
+The game name **khit!** comes from the Thai word **"คิด (khit)"**, meaning *to think*, representing the game's focus on logic, guessing, and problem-solving.
 
 ---
 
