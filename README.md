@@ -33,8 +33,8 @@ Navigate through different sections:
 ---
 
 ### ⭐ XP Reward System
-Players earn XP by completing games.
-XP can be used to unlock color themes.
+- Players earn XP by completing games.
+- XP can be used to unlock color themes.
 
 ---
 
@@ -52,6 +52,24 @@ Themes modify the game's visual design, including:
 - Background colors
 - Buttons
 - Game tiles
+
+---
+
+### ⚙️ Settings & Player Statistics
+
+Khit includes a settings menu where players can view their game progress and manage their saved data.
+
+- **Statistics Tracking**
+  - View total games played
+  - Track wins and losses
+  - View win rate percentage
+  - Monitor best streak
+  - Check total XP earned
+
+- **Reset Progress**
+  - Allows players to reset their saved progress
+  - Clears XP, unlocked themes, and statistics
+  - Restarts the game experience from the beginning
 
 ---
 
