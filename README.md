@@ -99,3 +99,11 @@ Khit/
 ├── LICENSE
 └── .gitignore
 ```
+
+---
+
+## ⌛Duration of the project
+
+- 5 days
+
+---
