@@ -46,7 +46,7 @@ XP can be used to unlock color themes.
 ### 🎨 Theme Shop
 Customize the game's appearance by purchasing color themes using XP.
 
-Available themes may include:
+Available themes:
 - Default
 - Nightnight
 - Leafie
