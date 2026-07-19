@@ -57,7 +57,7 @@ Themes modify the game's visual design, including:
 
 ### ⚙️ Settings & Player Statistics
 
-Khit includes a settings menu where players can view their game progress and manage their saved data.
+khit! includes a settings menu where players can view their game progress and manage their saved data.
 
 - **Statistics Tracking**
   - View total games played
