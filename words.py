@@ -24,13 +24,7 @@ def get_random_word(length):
     words = load_words(filename)
 
     return random.choice(words)
-
-
-# ----------------------------
-# TESTING ONLY
-# Delete these after testing
-# ----------------------------
-
+
 if __name__ == "__main__":
     print("3 Letters:", get_random_word(3))
     print("4 Letters:", get_random_word(4))
