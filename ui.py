@@ -1,4 +1,5 @@
 import customtkinter as ctk
+from PIL import Image
 from words import get_random_word
 from game import check_guess
 from save import add_xp
@@ -183,6 +184,47 @@ class KhitApp(ctk.CTk):
     def refresh_theme(self):
         self.theme = THEMES[get_theme()]
 
+    # ----- image helpers -----
+
+    def add_background(self, frame, size=(800, 800)):
+        """Places a full-frame background image behind a screen's widgets."""
+
+        bg_path = self.theme["bg_image"]
+        pil_image = Image.open(bg_path)
+
+        bg_image = ctk.CTkImage(
+            light_image=pil_image,
+            dark_image=pil_image,
+            size=size
+        )
+
+        bg_label = ctk.CTkLabel(frame, image=bg_image, text="")
+        bg_label.image = bg_image  # keep a reference so it isn't garbage collected
+
+        # place first so widgets packed/gridded afterwards render on top of it
+        bg_label.place(x=0, y=0, relwidth=1, relheight=1)
+
+        return bg_label
+
+    def add_logo(self, parent, size=(240, 100), **pack_opts):
+        """Creates a logo image label (replaces the old 'khit!' text title)."""
+
+        logo_path = self.theme["logo_image"]
+        pil_image = Image.open(logo_path)
+
+        logo_image = ctk.CTkImage(
+            light_image=pil_image,
+            dark_image=pil_image,
+            size=size
+        )
+
+        logo_label = ctk.CTkLabel(parent, image=logo_image, text="")
+        logo_label.image = logo_image  # keep a reference so it isn't garbage collected
+
+        logo_label.pack(**pack_opts)
+
+        return logo_label
+
 #MAINMENU
     def create_MainMenu(self):
 
@@ -191,12 +233,9 @@ class KhitApp(ctk.CTk):
             fg_color=self.theme["bg"]
         )
 
-        ctk.CTkLabel(
-            frame,
-            text="khit!",
-            font=("Arial", 28, "bold"),
-            text_color=self.theme["text"]
-        ).pack(pady=(50,50))
+        self.add_background(frame)
+
+        self.add_logo(frame, pady=(50, 50))
 
         tagline = ctk.CTkLabel(
             frame,
@@ -265,6 +304,8 @@ class KhitApp(ctk.CTk):
             fg_color=self.theme["bg"]
         )
 
+        self.add_background(frame)
+
         ctk.CTkLabel(
             frame,
             text="Choose Game Mode",
@@ -319,12 +360,9 @@ class KhitApp(ctk.CTk):
             fg_color=self.theme["bg"]
         )
 
-        ctk.CTkLabel(
-            frame,
-            text="khit!",
-            font=("Arial", 28, "bold"),
-            text_color=self.theme["text"]
-        ).pack(pady=(20,10))
+        self.add_background(frame)
+
+        self.add_logo(frame, size=(180, 75), pady=(20, 10))
 
         # Container for the board
         board_frame = ctk.CTkFrame(frame, fg_color="transparent")
@@ -498,6 +536,8 @@ class KhitApp(ctk.CTk):
             self,
             fg_color=self.theme["bg"]
         )
+
+        self.add_background(frame)
 
         data = load_data()
         owned = data["themes_owned"]
@@ -694,6 +734,8 @@ class KhitApp(ctk.CTk):
             self,
             fg_color=self.theme["bg"]
         )
+
+        self.add_background(frame)
 
         ctk.CTkLabel(
             frame,
