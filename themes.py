@@ -10,6 +10,8 @@ THEMES = {
         "wrong": "#ADB5BD",
         "text": "#1a1836",
         "hover":"#b02823",
+        "bg_image": "assets/backgrounds/defaultBG.png",
+        "logo_image": "assets/logos/defaultLogo.png",
     },
 
     "Leafie": {
@@ -21,7 +23,9 @@ THEMES = {
         "present": "#FFD400",
         "wrong": "#ADB5BD",
         "text": "black",
-        "hover": "#5f8367"
+        "hover": "#5f8367",
+        "bg_image": "assets/backgrounds/leafieBG.png",
+        "logo_image": "assets/logos/leafieLogo.png",
     },
 
     "NightNight": {
@@ -33,7 +37,9 @@ THEMES = {
         "present": "#FFD166",
         "wrong": "#ADB5BD",
         "text": "white",
-        "hover": "#4e5c6e"
+        "hover": "#4e5c6e",
+        "bg_image": "assets/backgrounds/nightnightBG.png",
+        "logo_image": "assets/logos/nightnightLogo.png",
     },
 
     "Pinku": {
@@ -45,7 +51,9 @@ THEMES = {
         "present": "#E9C46A",
         "wrong": "#ADB5BD",
         "text": "black",
-        "hover": "#be8395"
+        "hover": "#be8395",
+        "bg_image": "assets/backgrounds/pinkuBG.png",
+        "logo_image": "assets/logos/pinkuLogo.png",
     },
 
     "Cyber": {
@@ -57,7 +65,9 @@ THEMES = {
         "present": "#FFD54F",
         "wrong": "#ADB5BD",
         "text": "white",
-        "hover": "#5A189A"
+        "hover": "#5A189A",
+        "bg_image": "assets/backgrounds/cyberBG.png",
+        "logo_image": "assets/logos/cyberLogo.png",
     }
 
 }
