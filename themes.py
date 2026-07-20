@@ -1,6 +1,6 @@
 THEMES = {
 
-    "Default": {
+    "Nilknhake (Default)": {
         "price": 0,
         "bg": "#f9f0ee",
         "button": "#c32924",
