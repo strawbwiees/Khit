@@ -184,13 +184,13 @@ class KhitApp(ctk.CTk):
     def refresh_theme(self):
         self.theme = THEMES[get_theme()]
 
-    # ----- image helpers -----
+    # image
 
     def add_background(self, frame, size=(800, 800)):
         """Places a full-frame background image behind a screen's widgets."""
 
         bg_path = self.theme["bg_image"]
-        pil_image = Image.open(bg_path)
+        pil_image = Image.open(bg_path).convert("RGBA")
 
         bg_image = ctk.CTkImage(
             light_image=pil_image,
@@ -206,20 +206,30 @@ class KhitApp(ctk.CTk):
 
         return bg_label
 
-    def add_logo(self, parent, size=(240, 100), **pack_opts):
-        """Creates a logo image label (replaces the old 'khit!' text title)."""
+    def add_logo(self, parent, max_size=(240, 100), **pack_opts):
+        """Creates a logo image label (replaces the old 'khit!' text title),
+        scaled to fit within max_size while keeping its original aspect ratio."""
 
         logo_path = self.theme["logo_image"]
-        pil_image = Image.open(logo_path)
+        pil_image = Image.open(logo_path).convert("RGBA")
+
+        original_width, original_height = pil_image.size
+        max_width, max_height = max_size
+
+        scale = min(max_width / original_width, max_height / original_height)
+        display_size = (
+            max(1, round(original_width * scale)),
+            max(1, round(original_height * scale))
+        )
 
         logo_image = ctk.CTkImage(
             light_image=pil_image,
             dark_image=pil_image,
-            size=size
+            size=display_size
         )
 
         logo_label = ctk.CTkLabel(parent, image=logo_image, text="")
-        logo_label.image = logo_image  # keep a reference so it isn't garbage collected
+        logo_label.image = logo_image 
 
         logo_label.pack(**pack_opts)
 
@@ -235,7 +245,7 @@ class KhitApp(ctk.CTk):
 
         self.add_background(frame)
 
-        self.add_logo(frame, pady=(50, 50))
+        self.add_logo(frame, max_size=(420, 180), pady=(40, 40))
 
         tagline = ctk.CTkLabel(
             frame,
@@ -311,7 +321,7 @@ class KhitApp(ctk.CTk):
             text="Choose Game Mode",
             font=("Arial", 28, "bold"),
             text_color=self.theme["text"]
-        ).pack(pady=(40,40))
+        ).pack(pady=(80,40))
 
         ctk.CTkButton(
             frame,
@@ -362,11 +372,9 @@ class KhitApp(ctk.CTk):
 
         self.add_background(frame)
 
-        self.add_logo(frame, size=(180, 75), pady=(20, 10))
-
         # Container for the board
         board_frame = ctk.CTkFrame(frame, fg_color="transparent")
-        board_frame.pack(pady=20)
+        board_frame.pack(pady=(80,20))
 
         # Store all the boxes
         self.board = []
