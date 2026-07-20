@@ -42,7 +42,7 @@ Navigate through different sections:
 Customize the game's appearance by purchasing color themes using XP.
 
 Current available themes:
-- Default
+- Nilknhake (Default)
 - Nightnight
 - Leafie
 - Pinku
